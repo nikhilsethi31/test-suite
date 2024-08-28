@@ -1,0 +1,16 @@
+# Default values for test-suite-chart.
+#
+
+namespace: test-suite
+
+mongo:
+  username: admin
+  password: admin
+  image: mongo:7.0.7
+  port: 27017
+  replicas: 1
+
+testsuite:
+  image: enilegu/test-suite:v1.0.1
+  port: 9000
+  replicas: 1

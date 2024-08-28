@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-suite
+  namespace: {{ .Values.namespace }}
+spec:
+  replicas: {{ .Values.testsuite.replicas }}
+  selector:
+    matchLabels:
+      app: test-suite
+  template:
+    metadata:
+      labels:
+        app: test-suite
+    spec:
+      containers:
+      - name: test-suite
+        image: {{ .Values.testsuite.image }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: {{ .Values.testsuite.port }}
+
