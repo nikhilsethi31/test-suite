@@ -4,7 +4,7 @@ metadata:
   name: test-suite
   namespace: {{ .Values.namespace }}
 spec:
-  replicas: {{ .Values.testsuite.replicas }}
+  replicas: 2#{{ .Values.testsuite.replicas }}
   selector:
     matchLabels:
       app: test-suite
