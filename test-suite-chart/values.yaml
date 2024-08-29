@@ -13,4 +13,4 @@ mongo:
 testsuite:
   image: enilegu/test-suite:v1.0.1
   port: 9000
-  replicas: 1
+  replicas: 2
